@@ -60,5 +60,13 @@ angular.module('app').controller("MainController", function(){
     vm.addShow = function() {
         vm.shows.push(vm.new);
         vm.new = {};
+        $http({//http test for angular version 1.3.4
+            method: 'POST',
+            url: 'https://xxx.xxx.com/Api/Token'
+            }).then(function successCallback(response) {
+                var a=1;
+            }, function errorCallback(response) {
+                var a=2;
+             });
     };
 });
